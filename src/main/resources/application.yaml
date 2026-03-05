@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: msv-maven-student-csb
