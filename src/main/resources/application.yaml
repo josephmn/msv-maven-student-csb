@@ -1,3 +1,28 @@
+server:
+  port: 8083
 spring:
   application:
     name: msv-maven-student-csb
+    version: "@project.version@"
+  output:
+    ansi:
+      enabled: ALWAYS
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tuemail@gmail.com
+    password: tupassword
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+
+azure:
+  servicebus:
+    connection-string: 'Endpoint=sb://xxx.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=serial'
+    topic-name: 'student-topic'
+    subscription-name: 'student-suscription'
+    namespace: 'studentdemo'
+
+logging:
+  level:
+    root: INFO
