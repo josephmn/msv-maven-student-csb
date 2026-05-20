@@ -30,6 +30,7 @@ public class ServiceBusConfig {
             .processor()
             .topicName(topicName)
             .subscriptionName(subscriptionName)
+            .disableAutoComplete() // IMPORTANT: Disable auto-complete to ensure messages are only completed after successful processing
             .processMessage(listener::processMessage)
             .processError(error -> listener.processError(error.getException()))
             .buildProcessorClient();
